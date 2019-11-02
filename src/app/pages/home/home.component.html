@@ -1,0 +1,30 @@
+<div class="container-fluid d-flex h-100 mx-auto text-center flex-column">
+  <header></header>
+  <main role="main">
+    <div class="row justify-content-center">
+      <div class="col-md-6 mt-5">
+        <div>
+          <h1 class="shadow-text d-md-inline d-sm-block">Binary to Decimal!</h1>
+        </div>
+        <div class="my-4" [formGroup]="myForm">
+          <input formControlName="binText" class="form-control form-control-lg input-text" placeholder="Binary Value" aria-label="Binary Value">
+        </div>
+        <div [className]="binText && !myForm.valid ? 'alert alert-danger text-left' : 'd-none'" role="alert">
+          <strong>Error:</strong> Please enter a valid binary value.
+        </div>
+        <div class="results" *ngIf="myForm.valid">
+          <p class="w-100"><span> {{ binText | bin2dec }}</span></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <img src="assets/icons/icon-72x72.png" alt="Angular Logo" title="Built With Angular">
+        <img src="assets/icons/offline-icon-7.png" alt="Offline Logo" title="Works Offline">
+      </div>
+    </div>
+  </footer>
+</div>
+
