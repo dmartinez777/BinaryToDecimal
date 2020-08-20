@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "preinstall": "npx npm-force-resolutions",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
@@ -49,5 +50,9 @@
     "tslint": "~5.15.0",
     "typescript": "~3.5.3",
     "serialize-javascript": ">=2.1.1"
+  },
+  "resolutions": {
+    "braces": "^3.0.1",
+    "yargs-parser": "^18.1.3"
   }
 }
